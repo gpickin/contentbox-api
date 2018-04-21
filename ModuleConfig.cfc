@@ -1,5 +1,5 @@
 /**
-* An API module for Avoya Travel CMS API
+* An API module for CMS API
 */
 component {
 
