@@ -7,7 +7,7 @@ component extends="api.handlers.BaseHandler"{
 	* Echo
 	*/
 	function echo( event, rc, prc ){
-		prc.response.addMessage( "Welcome to the Avoya Travel API version #getModuleConfig( 'v1' ).version#" );
+		prc.response.addMessage( "Welcome to the API version #getModuleConfig( 'v1' ).version#" );
 	}
 
 	/**
