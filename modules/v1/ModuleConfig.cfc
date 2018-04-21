@@ -1,5 +1,5 @@
 /**
-* An API module for Avoya Membership
+* An API module
 */
 component {
 
