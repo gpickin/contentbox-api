@@ -21,6 +21,8 @@ component accessors="true" {
 	property name="responsetime"	type="numeric"		default="0";
 	property name="cachedResponse" 	type="boolean"		default="false";
     property name="headers" 		type="array";
+    property name="rawJSON"         type="boolean"      default="false";
+
 
 	STATUS_TEXTS = {
         "100" = "Continue",
@@ -108,6 +110,7 @@ component accessors="true" {
 		variables.responsetime		= 0;
 		variables.cachedResponse 	= false;
 		variables.headers 			= [];
+        variables.rawJSON           = false;
 
 		return this;
     }
@@ -160,7 +163,9 @@ component accessors="true" {
 		// HTML/text type
 		if( listFindNoCase( "html,text", variables.format ) ){
 			return variables.data;
-		}
+		} else if( variables.rawJSON ){
+            return variables.data;
+        }
 		// Else return data packet
 		return {
 			"error" 		 = variables.error ? true : false,
